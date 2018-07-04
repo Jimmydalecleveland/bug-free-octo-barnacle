@@ -1,5 +1,5 @@
 ---
-path: test
+path: /test
 date: '2018-07-31'
 title: Test Post
 ---
