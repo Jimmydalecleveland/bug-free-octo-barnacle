@@ -8,11 +8,15 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "emotion": "^9.2.4",
+    "emotion-server": "^9.2.4",
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-emotion": "^1.1.17",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
-    "netlify-cms": "^1.9.3"
+    "netlify-cms": "^1.9.3",
+    "react-emotion": "^9.2.4"
   }
 }
