@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
-import Button from '../components/Button';
+import Blog from '../pages/Blog';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below
@@ -9,18 +8,12 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <BlogPost className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <Button>Close</Button>
-        <Button primary>I Agree!</Button>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </BlogPost>
+    <Blog
+      title={frontmatter.title}
+      date={frontmatter.date}
+      html={html}
+      isDangerous={true}
+    />
   );
 }
 
@@ -34,13 +27,5 @@ export const pageQuery = graphql`
         title
       }
     }
-  }
-`;
-
-const BlogPost = styled('section')`
-  color: #444;
-
-  img {
-    max-width: 100%;
   }
 `;

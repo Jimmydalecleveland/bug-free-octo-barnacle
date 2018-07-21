@@ -13,6 +13,5 @@ const Button = styled('button')`
   padding: 0.5em 1em;
   border: none;
   border-radius: 3px;
-  font-size: ${props =>
-    console.log(props) || (props.primary ? '26px' : '18px')};
+  font-size: ${props => (props.primary ? '26px' : '18px')};
 `;
